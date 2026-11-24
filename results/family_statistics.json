@@ -1,0 +1,99 @@
+{
+  "means": {
+    "BC-15-oracle": 0.8409816332598499,
+    "BC-15-selected": 0.544995190929799,
+    "BC-density": 0.5685310644481266,
+    "DBSCAN-15-oracle": 0.8402885171957203,
+    "DBSCAN-15-selected": 0.5921183547821514,
+    "DBSCAN-Single": 0.6098867067589329,
+    "HDBSCAN-15-oracle": 0.8393377443399453,
+    "HDBSCAN-15-selected": 0.7606353198762686
+  },
+  "contrasts": [
+    {
+      "reference": "BC-density",
+      "comparator": "BC-15-selected",
+      "n_families": 4,
+      "n_configs": 16,
+      "repeats": 10,
+      "mean_delta_ARI": 0.023535873518327678,
+      "block_95_low": -0.11400671045000038,
+      "block_95_high": 0.2205894074646187,
+      "exact_family_sign_flip_p": 1.0,
+      "family_means": {
+        "blobs": -0.035953373035596245,
+        "moons": -0.1400244895881351,
+        "circles": 0.3061181365807164,
+        "other": -0.03599677988367443
+      }
+    },
+    {
+      "reference": "BC-density",
+      "comparator": "DBSCAN-Single",
+      "n_families": 4,
+      "n_configs": 16,
+      "repeats": 10,
+      "mean_delta_ARI": -0.04135564231080635,
+      "block_95_low": -0.12291886467188459,
+      "block_95_high": 0.01596155023813922,
+      "exact_family_sign_flip_p": 0.5,
+      "family_means": {
+        "blobs": 0.028661421930489574,
+        "moons": -0.15986476617636763,
+        "circles": -0.022138064838911845,
+        "other": -0.012081160158435458
+      }
+    },
+    {
+      "reference": "BC-density",
+      "comparator": "HDBSCAN-15-selected",
+      "n_families": 4,
+      "n_configs": 16,
+      "repeats": 10,
+      "mean_delta_ARI": -0.19210425542814208,
+      "block_95_low": -0.36671675166428525,
+      "block_95_high": -0.06235133987307162,
+      "exact_family_sign_flip_p": 0.125,
+      "family_means": {
+        "blobs": -0.04818100187679776,
+        "moons": -0.4634484429292652,
+        "circles": -0.1802658990371598,
+        "other": -0.0765216778693455
+      }
+    },
+    {
+      "reference": "BC-density",
+      "comparator": "BC-15-oracle",
+      "n_families": 4,
+      "n_configs": 16,
+      "repeats": 10,
+      "mean_delta_ARI": -0.2724505688117233,
+      "block_95_low": -0.4547566803192903,
+      "block_95_high": -0.09014445730415632,
+      "exact_family_sign_flip_p": 0.125,
+      "family_means": {
+        "blobs": -0.06971180195772056,
+        "moons": -0.48814025746658685,
+        "circles": -0.4213731031719937,
+        "other": -0.11057711265059211
+      }
+    },
+    {
+      "reference": "BC-density",
+      "comparator": "HDBSCAN-15-oracle",
+      "n_families": 4,
+      "n_configs": 16,
+      "repeats": 10,
+      "mean_delta_ARI": -0.2708066798918187,
+      "block_95_low": -0.4475298535310975,
+      "block_95_high": -0.09408350625254007,
+      "exact_family_sign_flip_p": 0.125,
+      "family_means": {
+        "blobs": -0.06421036335960013,
+        "moons": -0.47727439891638285,
+        "circles": -0.4177853081458121,
+        "other": -0.12395664914548002
+      }
+    }
+  ]
+}
