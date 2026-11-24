@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the archived software release when available."
+title: "Border Core Clustering: Reproducible Experimental Implementation"
+type: software
+authors:
+  - family-names: El Khattabi
+    given-names: Mohammed Zakariae
+  - family-names: Mombo
+    given-names: Hiyess Jehoji
+  - family-names: Ouazzani Chahdi
+    given-names: Tayeb
+  - family-names: Marfak
+    given-names: Abdelghafour
+repository-code: https://github.com/zikas007/border-core-clustering
+keywords:
+  - unsupervised clustering
+  - density-based clustering
+  - boundary propagation
+  - reproducibility
