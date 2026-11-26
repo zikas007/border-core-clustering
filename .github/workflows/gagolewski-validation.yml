@@ -1,1 +1,37 @@
+name: External validation — Gagolewski v1.2.0
+on:
+  workflow_dispatch:
+    inputs:
+      max_cases:
+        description: 'Number of predeclared datasets (0 = all 28)'
+        default: '0'
+        required: true
+        type: string
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    permissions:
+      contents: read
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install frozen dependencies
+        run: python -m pip install -r requirements.txt
+      - name: External benchmark
+        run: python scripts/benchmark_gagolewski.py --max-cases "${{ inputs.max_cases }}" --output-dir benchmark_gagolewski
+      - name: Upload benchmark evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gagolewski-v120-results
+          path: benchmark_gagolewski/
+          if-no-files-found: warn
 
